@@ -8,11 +8,15 @@
 import os
 import json
 import logging
+from flask import Flask
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Tuple
 from telegram import Update, ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from dotenv import load_dotenv
+from keep_alive import keep_alive
+
+keep_alive()
 
 # Загружаем переменные окружения из .env файла
 load_dotenv()
